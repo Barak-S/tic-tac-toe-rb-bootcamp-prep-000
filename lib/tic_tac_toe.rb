@@ -66,6 +66,7 @@ def play(board)
   until over?(board) == true
     turn(board)
   end
+end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")

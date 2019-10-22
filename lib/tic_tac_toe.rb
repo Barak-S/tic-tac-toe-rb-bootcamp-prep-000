@@ -63,8 +63,9 @@ def turn(board)
 end
 
 def play(board)
-  9.times {turn(board)}
-end
+  until over?(board) == true
+    turn(board)
+  end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")

@@ -131,3 +131,5 @@ def play(board)
     puts "Cat's Game!"
   end
 end
+
+#To play, type to the console : bin/tictactoe

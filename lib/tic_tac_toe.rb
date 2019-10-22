@@ -38,7 +38,7 @@ def valid_move?(board, index)
 end
 
 #Takes a users num and the board, and places the X or O char in that position
-def move(board, index, character = "X")
+def move(board, index, character)
   board[index] = character
   return board
 end
@@ -60,8 +60,6 @@ def play(board)
   9.times {turn(board)}
 end
 
-
-# Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
@@ -118,17 +116,6 @@ def won?(board)
   }
   return false
 end
-
-
-# def full?(board)
-#   board.each do |element|
-#     if element == nil || element == " " || element == ""
-#       return false
-#     else
-#       return true
-#     end
-#   end
-# end
 
 def full?(board)
   board.all? {|index| index == "X" || index == "O"}
